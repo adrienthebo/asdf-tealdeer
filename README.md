@@ -1,5 +1,7 @@
 # asdf-tealdeer
 
+![CI](https://github.com/adrienthebo/asdf-tealdeer/workflows/CI/badge.svg)
+
 [tealdeer](https://dbrgn.github.io/tealdeer/) plugin for the [asdf](https://github.com/asdf-vm/asdf) version manager.
 
 Tealdeer very fast implementation of [tldr](https://github.com/tldr-pages/tldr) in Rust: Simplified, example based and community-driven man pages.
