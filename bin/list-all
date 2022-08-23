@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCRIPT_ROOT="$(cd "$(dirname "$0")"; pwd)"
+# shellcheck disable=SC1090
+source "${SCRIPT_ROOT}/../lib/utils.sh"
+
+function list_all() {
+  for version in $(git ls-remote --tags --refs https://github.com/dbrgn/tealdeer.git | grep -o 'refs/tags/.*' | cut -d/ -f3- | sed 's/^v//'); do
+    echo "$version"
+  done
+}
+
+list_all | sort_versions | xargs echo
+# vim: ai ts=2 sw=2 et sts=2 ft=sh
